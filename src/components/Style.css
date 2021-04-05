@@ -1,0 +1,46 @@
+.header__nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1b1e21;
+    border-radius: 0 0 20px 20px;
+    padding: 20px;
+}
+
+.nav__item {
+    padding-right: 30px;
+}
+
+.Search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.overview {
+    background-color: #fff;
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+    visibility: hidden;
+    border-radius: 50px;
+}
+
+.CardActionArea {   
+    position: relative;
+}
+
+.CardActionArea:hover .overview {
+    visibility: visible;
+    transform: translateY(0%);
+    font-size: 13px;
+}
