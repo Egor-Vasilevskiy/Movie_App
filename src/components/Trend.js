@@ -18,9 +18,11 @@ export const Trend = () => {
   
 
     return (
+      <>              
             <div className="Movies">
                 {movies.length > 0 && movies.map((movie) => 
                 <ResultCard  key={movie.id} movie={movie} type="watchlist"/>)}
             </div>
+      </>
     )
 }

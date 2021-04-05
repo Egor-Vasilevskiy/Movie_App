@@ -19,7 +19,8 @@ const useStyles = makeStyles({
 
     input: {
         color:'#fff',
-        paddingLeft: '15px'
+        paddingLeft: '15px',
+        textAlign:'center',
     },
 
     iconButton: {
@@ -38,7 +39,7 @@ export const Search = () => {
   
       setQuery(e.target.value);
   
-      fetch(SEARCHAPI + query)
+      fetch(SEARCHAPI)
         .then((res) => res.json())
         .then((data) => {
           if (!data.errors) {
