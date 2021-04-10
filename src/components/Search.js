@@ -39,7 +39,7 @@ export const Search = () => {
   
       setQuery(e.target.value);
   
-      fetch(SEARCHAPI)
+      fetch(SEARCHAPI + query)
         .then((res) => res.json())
         .then((data) => {
           if (!data.errors) {
@@ -52,18 +52,18 @@ export const Search = () => {
   
     return (
         <div className='Search'>
-            <Paper component="form" className={classes.root}>
-                <InputBase
-                    className={classes.input}
-                    placeholder="Что будем искать?"
-                    value={query}
-                    onChange={onChange}
-                />
-            </Paper>
+        <Paper component="form" className={classes.root}>
+            <InputBase
+                className={classes.input}
+                placeholder="Что будем искать?"
+                value={query}
+                onChange={onChange}
+            />
+        </Paper>
 
-            <div className="Movies">
-                {results.length > 0 && results.map((movie) => 
-                <ResultCard  key={movie.id} movie={movie} />)}
-            </div>
+        <div className="Movies">
+            {results.length > 0 && results.map((movie) => 
+            <ResultCard  key={movie.id} movie={movie} />)}
         </div>
+    </div>
 )}

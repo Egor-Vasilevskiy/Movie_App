@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { GlobalContext } from '../context/GlobalState';
+import StarIcon from '@material-ui/icons/Star';
 import './Style.css'
 
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
@@ -58,6 +59,9 @@ export const MovieCard = ({movie}) => {
           <Typography className={classes.titleOverview}>Overview:</Typography>
           {movie.overview}
         </Typography>
+        <Typography className={classes.vote_average}>
+            Средняя оценка {movie.vote_average} <StarIcon/>
+          </Typography>
       </CardContent>
     </CardActionArea>
     <CardActions className={classes.button}>
